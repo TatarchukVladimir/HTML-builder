@@ -19,3 +19,6 @@ pipeline (
     }
   } 
 );
+
+process.on('exit', () => process.stdout.write('Вы вышли из программы.'));
+process.on('SIGINT', process.exit);
