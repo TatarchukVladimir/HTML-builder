@@ -15,7 +15,7 @@ readdir(folderPath, { withFileTypes: true }).then(
         const fileExtension = path.extname(item.name).slice(1);
 
         stat(path.join(folderPath, item.name), (err, stats) => {
-          console.log(`${fileName} - ${fileExtension} - ${stats.size / 1000}kb`)  
+          console.log(`${fileName} - ${fileExtension} - ${stats.size / 1024}kb`)  
         });
       }
 
